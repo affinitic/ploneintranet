@@ -58,7 +58,7 @@
           </fieldset>
           <fieldset class="horizontal">
             <fieldset class="group">
-              <p class="legend">You are a member of the following groups</p>
+              <p class="legend" i18n:translate="">You are a member of the following groups</p>
               <ul class="group-table pat-equaliser"
                   id="person-grouplist"
               >
