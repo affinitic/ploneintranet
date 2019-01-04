@@ -293,7 +293,7 @@ class ContentView(BrowserView):
                     context.dx_modified = str(int(time()))
                     if not self.autosave_enabled:
                         messages.append(
-                            _("Your changes have been saved.")
+                            context.translate(_("Your changes have been saved."))
                         )
 
         versioning_errors = self.save_version()

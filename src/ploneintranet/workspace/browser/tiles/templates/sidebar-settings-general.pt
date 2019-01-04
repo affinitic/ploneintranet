@@ -46,10 +46,10 @@
                 </label>
               </fieldset>
               <fieldset class="pat-checklist">
-                <label tal:define="event_global_default context/event_global_default | nothing">
+                <label tal:define="event_global_default context/event_global_default | nothing" i18n:translate="">
                   <input name="event_global_default" type="checkbox" value="selected"
-                         tal:attributes="checked python:'checked' if event_global_default else ''; disabled not:view/can_manage_workspace"/> Workspace calendar visible in central calendar application
-                  <input name="event_global_default-empty-marker" type="hidden" value="1"/>
+                         tal:attributes="checked python:'checked' if event_global_default else ''; disabled not:view/can_manage_workspace" i18n:name="input_checkbox"/> Workspace calendar visible in central calendar application
+                  <input name="event_global_default-empty-marker" type="hidden" value="1" i18n:name="input_hidden"/>
                 </label>
               </fieldset>
             </fieldset>
