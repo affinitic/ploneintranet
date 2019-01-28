@@ -80,7 +80,7 @@
                   tal:condition="nocall:user"
                   i18n:translate=""
           >Personal task list</option>
-          <optgroup label="Workspaces">
+          <optgroup label="Workspaces" i18n:attributes="label">
             <!-- Only workspaces the user has edit rights to are displayed here. -->
             <tal:options repeat="container containers">
               <option
