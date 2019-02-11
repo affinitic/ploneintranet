@@ -27,7 +27,7 @@
                 <li class="sortable-item tag"
                     tal:repeat="tile custom_tiles"
                 >
-                  <p class="label icon-tag">
+                  <p class="label icon-tag" i18n:translate="">
                     ${python:view.get_tile_name(tile)}
                     <select class="float-after"
                             name="display-${tile}"
@@ -35,6 +35,7 @@
                               display python:view.get_tile_display(tile);
                               is_resizable python:view.is_resizable(tile);
                             "
+                            i18n:name="select"
                     >
                       <option selected="${python:'selected' if display == 'none' else None}"
                               value="none"
