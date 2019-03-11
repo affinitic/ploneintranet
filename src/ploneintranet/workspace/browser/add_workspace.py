@@ -144,9 +144,9 @@ class AddWorkspace(AddBase):
         """
         if not self.templates_folder:
             return {}
-        return {brain.getId: brain.getObject()
-                for brain in self.templates_folder.getFolderContents()
-                if brain.getId not in self.policies}
+        return {id: obj
+                for id, obj in self.templates_folder.contentItems()
+                if id not in self.policies}
 
     @property
     def templates_folder(self):
