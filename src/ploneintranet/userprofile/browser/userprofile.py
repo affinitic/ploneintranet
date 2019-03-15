@@ -212,6 +212,10 @@ class UserProfileView(UserProfileViewForm):
             if group.getProperty('type', None) == 'workspace':
                 # This is a groupspace
                 uid = group.getProperty('uid')
+                ws = plone_api.content.get(UID=uid)
+                # User might not be allowed to access the ws
+                if ws is None:
+                    continue
                 url = portal_url + group.getProperty('workspace_path')
                 workspaces[uid] = dict(
                     url=url,
