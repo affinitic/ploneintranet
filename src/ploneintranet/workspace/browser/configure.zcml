@@ -271,7 +271,7 @@
     <browser:page
       name="panel-add-user"
       for="ploneintranet.workspace.workspacefolder.IWorkspaceFolder"
-      permission="collective.workspace.ManageRoster"
+      permission="collective.workspace.ViewRoster"
       class=".roster.WorkspaceMemberPicker"
       template="templates/panel-add-user.pt"
       layer="..interfaces.IPloneintranetWorkspaceLayer"
@@ -280,7 +280,7 @@
     <browser:page
       name="panel-add-group"
       for="ploneintranet.workspace.workspacefolder.IWorkspaceFolder"
-      permission="collective.workspace.ManageRoster"
+      permission="collective.workspace.ViewRoster"
       class=".roster.WorkspaceMemberPicker"
       template="templates/panel-add-group.pt"
       layer="..interfaces.IPloneintranetWorkspaceLayer"
@@ -289,7 +289,7 @@
     <browser:page
       name="panel-remove-user"
       for="ploneintranet.workspace.workspacefolder.IWorkspaceFolder"
-      permission="collective.workspace.ManageRoster"
+      permission="collective.workspace.ViewRoster"
       class=".roster.WorkspaceMemberPicker"
       template="templates/panel-remove-user.pt"
       layer="..interfaces.IPloneintranetWorkspaceLayer"

@@ -143,10 +143,10 @@ class BaseTile(BrowserView):
         """
         does this user have permission to manage the workspace's roster
         """
-        return api.user.has_permission(
-            "ploneintranet.workspace: Manage workspace",
-            obj=self.context,
-        )
+        if self.can_manage_workspace():
+            return True
+
+        return self.context.join_policy in {'self', 'team'}
 
     def can_add(self):
         """
