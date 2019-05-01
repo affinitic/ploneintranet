@@ -32,9 +32,7 @@ class ToggleLike(BrowserView):
         self.item_id = api.content.get_uuid(self.context)
         self.like_type = "content"
 
-    @property
-    @memoize
-    def likerids(self):
+    def get_likerids(self):
         ''' The id of the people that like this content
         '''
         return self.util.get_likers(
@@ -42,9 +40,7 @@ class ToggleLike(BrowserView):
             item_id=self.item_id,
         )
 
-    @property
-    @memoize
-    def likers(self):
+    def get_likers(self):
         ''' The id of the people that like this content
 
         If it includes the current user, return Myself as the first element
@@ -79,6 +75,8 @@ class ToggleLike(BrowserView):
         """ """
         if not self.validate_id(self.item_id):
             return 'No valid item-id: %s' % self.item_id
+        self.likerids = self.get_likerids()
+        self.likers = self.get_likers()
 
         self.is_liked = self.util.is_liked(
             self.like_type,
